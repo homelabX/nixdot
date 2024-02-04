@@ -14,7 +14,7 @@
 
   home = {
     username = "giri";
-    homeDirectory = lib.mkDefault "/home/giri";
+    homeDirectory = "/home/giri";
     stateVersion = "23.11";
     extraOutputsToInstall = ["doc" "devdoc"];
   };
