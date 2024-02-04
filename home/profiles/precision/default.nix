@@ -5,7 +5,7 @@
     #../../editors/neovim
 
     # programs
-    #../../programs
+    ../../programs
     #../../programs/games
     ../../programs/wayland
 
