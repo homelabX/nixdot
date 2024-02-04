@@ -6,6 +6,7 @@
     #./media
     #./gtk.nix
     #./office
+    ./vscode
   ];
 
   home.packages = with pkgs; [
