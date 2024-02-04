@@ -29,7 +29,7 @@ in {
 
       allow_tearing = false;
       resize_on_border = true;
-      layout = "dwindle"
+      layout = "dwindle";
     };
 
     decoration = {
