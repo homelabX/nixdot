@@ -15,7 +15,7 @@ let
   laptop =
     desktop
     ++ [
-      #./hardware/bluetooth.nix
+      ./hardware/bluetooth.nix
 #
       #./services/backlight.nix
       #./services/power.nix
