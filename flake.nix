@@ -8,9 +8,9 @@
       imports = [
         ./home/profiles
         ./hosts
-        ./lib
-        ./modules
-        ./pkgs
+        #./lib
+        #./modules
+        #./pkgs
         ./pre-commit-hooks.nix
       ];
 
