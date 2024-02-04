@@ -6,7 +6,7 @@
 }: {
   imports = [
     #./specialisations.nix
-    #./terminal
+    ./terminal
     #inputs.matugen.nixosModules.default
     #inputs.nix-index-db.hmModules.nix-index
     #self.nixosModules.theme
@@ -14,7 +14,7 @@
 
   home = {
     username = "giri";
-    homeDirectory = "/home/giri";
+    homeDirectory = lib.mkDefault "/home/giri";
     stateVersion = "23.11";
     extraOutputsToInstall = ["doc" "devdoc"];
   };

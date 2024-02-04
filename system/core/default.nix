@@ -3,9 +3,9 @@
 {
   imports = [
     #./security.nix
-    #./users.nix
+    ./users.nix
     #../nix
-    #../programs/zsh.nix
+    ../programs/zsh.nix
   ];
 
   documentation.dev.enable = true;
