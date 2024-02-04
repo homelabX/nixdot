@@ -2,15 +2,15 @@
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
-    package = pkgs.bluez5-experimental;
+    # package = pkgs.bluez5-experimental;
     settings = {
       # make Xbox Series X controller work
       General = {
-        Class = "0x000100";
-        ControllerMode = "bredr";
-        FastConnectable = true;
-        JustWorksRepairing = "always";
-        Privacy = "device";
+        #Class = "0x000100";
+        #ControllerMode = "bredr";
+        #FastConnectable = true;
+        #JustWorksRepairing = "always";
+        #Privacy = "device";
         # Battery info for Bluetooth devices
         Experimental = true;
         Enable = "Source,Sink,Media,Socket";
@@ -19,5 +19,5 @@
   };
 
   # https://github.com/NixOS/nixpkgs/issues/114222
-  systemd.user.services.telephony_client.enable = false;
+  # systemd.user.services.telephony_client.enable = false;
 }
