@@ -5,7 +5,7 @@
     settings.excludes = ["flake.lock"];
 
     settings.hooks = {
-      alejandra.enable = true;
+      alejandra.enable = false;
       prettier = {
         enable = true;
         excludes = [".js" ".md" ".ts"];
