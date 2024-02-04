@@ -24,7 +24,7 @@
           #"${mod}/core/lanzaboote.nix"
 #
           #"${mod}/programs/gamemode.nix"
-          #"${mod}/programs/hyprland.nix"
+          "${mod}/programs/hyprland.nix"
           #"${mod}/programs/steam.nix"
 #
           #"${mod}/network/spotify.nix"
