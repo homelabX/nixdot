@@ -7,11 +7,10 @@ in {
     "$mod" = "SUPER";
     "$terminal" = "alacritty";
 
-    #"monitor"="DP-3,1920x1080,0x0,1";
-    #"monitor"="eDP-1,1920x1080,1920x0,1";
-    
     env = [
       "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
+      "XCURSOR_SIZE,24"
+      "QT_QPA_PLATFORMTHEME,qt5ct" # change to qt6ct if you have that
     ];
 
     exec-once = [
@@ -23,42 +22,47 @@ in {
 
     general = {
       gaps_in = 5;
-      gaps_out = 5;
-      border_size = 1;
-      "col.active_border" = "rgba(88888888)";
-      "col.inactive_border" = "rgba(00000088)";
+      gaps_out = 20;
+      border_size = 2;
+      "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
+      "col.inactive_border" = "rgba(595959aa)";
 
-      allow_tearing = true;
+      allow_tearing = false;
       resize_on_border = true;
+      layout = "dwindle"
     };
 
     decoration = {
-      rounding = 16;
+      rounding = 10;
       blur = {
         enabled = true;
-        brightness = 1.0;
-        contrast = 1.0;
-        noise = 0.02;
+        #brightness = 1.0;
+        #contrast = 1.0;
+        #noise = 0.02;
 
-        passes = 3;
-        size = 10;
+        passes = 1;
+        size = 3;
+        vibrancy = 0.1696;
       };
 
       drop_shadow = true;
-      shadow_ignore_window = true;
-      shadow_offset = "0 2";
-      shadow_range = 20;
+      # shadow_ignore_window = true;
+      # shadow_offset = "0 2";
+      shadow_range = 4;
       shadow_render_power = 3;
-      "col.shadow" = "rgba(00000055)";
+      "col.shadow" = "rgba(1a1a1aee)";
     };
 
     animations = {
       enabled = true;
+      bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
       animation = [
-        "border, 1, 2, default"
-        "fade, 1, 4, default"
-        "windows, 1, 3, default, popin 80%"
-        "workspaces, 1, 2, default, slide"
+        "windows, 1, 7, myBezier"
+        "windowsOut, 1, 7, default, popin 80%"
+        "border, 1, 10, default"
+        "borderangle, 1, 8, default"
+        "fade, 1, 7, default"
+        "workspaces, 1, 6, default"
       ];
     };
 
@@ -113,14 +117,4 @@ in {
 
     debug.disable_logs = false;
   };
-
-  wayland.windowManager.hyprland.extraConfig = ''
-    plugin {
-      csgo-vulkan-fix {
-        res_w = 1280
-        res_h = 800
-        class = cs2
-      }
-    }
-  '';
 }
