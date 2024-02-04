@@ -4,7 +4,7 @@
   imports = [
     #./security.nix
     ./users.nix
-    #../nix
+    ../nix
     ../programs/zsh.nix
   ];
 

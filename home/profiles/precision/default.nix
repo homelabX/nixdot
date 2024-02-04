@@ -7,7 +7,7 @@
     # programs
     #../../programs
     #../../programs/games
-    #../../programs/wayland
+    ../../programs/wayland
 
     # services
     #../../services/ags
